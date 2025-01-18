@@ -38,15 +38,15 @@
 
     <script>
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-		const firebaseConfig = {
-		  apiKey: "AIzaSyDf0nKd5ENEQ3pmIMmbt65xMdERp39LW3w",
-		  authDomain: "message-a373f.firebaseapp.com",
-		  projectId: "message-a373f",
-		  storageBucket: "message-a373f.firebasestorage.app",
-		  messagingSenderId: "951773998469",
-		  appId: "1:951773998469:web:dccf7fb2feffe1eeb568ec",
-		  measurementId: "G-JJ8R8C0QG8"
-		};
+        const firebaseConfig = {
+            apiKey: "AIzaSyDf0nKd5ENEQ3pmIMmbt65xMdERp39LW3w",
+            authDomain: "message-a373f.firebaseapp.com",
+            projectId: "message-a373f",
+            storageBucket: "message-a373f.firebasestorage.app",
+            messagingSenderId: "951773998469",
+            appId: "1:951773998469:web:dccf7fb2feffe1eeb568ec",
+            measurementId: "G-JJ8R8C0QG8"
+        };
 
         // Initialize Firebase
         const app = firebase.initializeApp(firebaseConfig);
@@ -92,7 +92,8 @@
                 const editArea = document.getElementById("edit-area");
 
                 if (message) {
-                    messageElement.innerText = message;
+                    // Render the message as HTML
+                    messageElement.innerHTML = message;
                     editArea.value = message;
                 } else {
                     messageElement.innerText = "No message found.";
